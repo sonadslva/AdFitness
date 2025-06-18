@@ -717,7 +717,7 @@ export default function FitnessWebsite() {
                   <span className="text-[#AD6B08] font-bold text-lg">{`0${i + 1}`}</span>
                   <span className="text-white font-medium">{text}</span>
                 </div>
-                <span className="text-[#AD6B08] text-xl font-bold">+</span>
+                {/* <span className="text-[#AD6B08] text-xl font-bold">+</span> */}
               </div>
             </motion.div>
           ))}
@@ -976,7 +976,8 @@ export default function FitnessWebsite() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-[#DED7A3]/20 h-[700px] flex items-center justify-center overflow-hidden"
+            className="hidden lg:flex bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-[#DED7A3]/20 h-[700px] items-center justify-center overflow-hidden"
+
           >
             <img
               src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
