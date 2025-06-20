@@ -937,182 +937,205 @@ export default function FitnessWebsite() {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-20 bg-black relative overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23DED7A3' fill-opacity='0.1'%3E%3Cpath d='M30 30h-2v-2h2v2zm0-10h-2v-2h2v2zm0 20h-2v-2h2v2zm10-10h-2v-2h2v2zm-20 0h-2v-2h2v2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-            }}
-          ></div>
-        </div>
+<section id="contact" className="py-20 bg-black relative overflow-hidden">
+  {/* Background Pattern */}
+  <div className="absolute inset-0 opacity-10">
+    <div
+      className="absolute inset-0"
+      style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23DED7A3' fill-opacity='0.1'%3E%3Cpath d='M30 30h-2v-2h2v2zm0-10h-2v-2h2v2zm0 20h-2v-2h2v2zm10-10h-2v-2h2v2zm-20 0h-2v-2h2v2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+      }}
+    ></div>
+  </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Header */}
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <div className="inline-flex items-center gap-2 bg-[#DED7A3]/10 rounded-full px-6 py-2 mb-6">
-              <span className="text-[#DED7A3] text-sm font-semibold tracking-wider uppercase">
-                CONTACT US
-              </span>
-            </div>
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-[#DED7A3] to-white bg-clip-text text-transparent">
-              Get In Touch
-            </h2>
-            <p className="text-xl text-[#DED7A3]/70 max-w-3xl mx-auto leading-relaxed">
-              Have questions or ready to start your fitness journey? Reach out
-              to us and we'll get back to you within 24 hours.
-            </p>
-          </motion.div>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    {/* Header */}
+    <motion.div
+      className="text-center mb-16"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+    >
+      <div className="inline-flex items-center gap-2 bg-[#DED7A3]/10 rounded-full px-6 py-2 mb-6">
+        <span className="text-[#DED7A3] text-sm font-semibold tracking-wider uppercase">
+          CONTACT US
+        </span>
+      </div>
+      <h2 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-[#DED7A3] to-white bg-clip-text text-transparent">
+        Get In Touch
+      </h2>
+      <p className="text-xl text-[#DED7A3]/70 max-w-3xl mx-auto leading-relaxed">
+        Have questions or ready to start your fitness journey? Reach out
+        to us and we'll get back to you within 24 hours.
+      </p>
+    </motion.div>
 
-          {/* Content Grid */}
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-              className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-[#DED7A3]/20"
-            >
-              <h3 className="text-2xl font-bold text-[#DED7A3] mb-6">
-                Send Us a Message
-              </h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-[#DED7A3]/80 mb-2"
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className="w-full bg-gray-800 border border-[#DED7A3]/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#DED7A3]/50"
-                      placeholder="Your name"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-[#DED7A3]/80 mb-2"
-                    >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full bg-gray-800 border border-[#DED7A3]/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#DED7A3]/50"
-                      placeholder="your@email.com"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-[#DED7A3]/80 mb-2"
-                  >
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    className="w-full bg-gray-800 border border-[#DED7A3]/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#DED7A3]/50"
-                    placeholder="+91 1234567890"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="service"
-                    className="block text-[#DED7A3]/80 mb-2"
-                  >
-                    Service Interested In
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleInputChange}
-                    className="w-full bg-gray-800 border border-[#DED7A3]/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#DED7A3]/50"
-                    required
-                  >
-                    <option value="">Select a service</option>
-                    {services.map((service, index) => (
-                      <option key={index} value={service}>
-                        {service}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-[#DED7A3]/80 mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows="4"
-                    className="w-full bg-gray-800 border border-[#DED7A3]/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#DED7A3]/50"
-                    placeholder="Tell us about your fitness goals..."
-                    required
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-[#DED7A3] text-black px-6 py-4 font-bold rounded-lg hover:bg-white transition-all duration-300 transform hover:scale-[1.02]"
-                  disabled={isSubmitted}
-                >
-                  {isSubmitted ? "THANK YOU!" : "SEND MESSAGE"}
-                </button>
-              </form>
-            </motion.div>
-
-            {/* Image Block */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-              className="hidden lg:flex bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-[#DED7A3]/20 h-[700px] items-center justify-center overflow-hidden"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-                alt="Fitness gym interior"
-                className="w-full h-full object-cover rounded-xl opacity-80 transition-transform duration-700 hover:scale-105"
+    {/* Content Grid */}
+    <div className="grid lg:grid-cols-2 gap-12">
+      {/* Contact Form */}
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="bg-gray-900/50 backdrop-blur-sm rounded-2xl p-8 border border-[#DED7A3]/20"
+      >
+        <h3 className="text-2xl font-bold text-[#DED7A3] mb-6">
+          Send Us a Message
+        </h3>
+        <form 
+          action="https://api.web3forms.com/submit" 
+          method="POST"
+          className="space-y-6"
+        >
+          <input 
+            type="hidden" 
+            name="access_key" 
+            value="9a86016f-bb93-4f0f-a32f-e806e3367f6c" 
+          />
+          <input
+            type="hidden"
+            name="subject"
+            value="New Contact Form Submission"
+          />
+          <input
+            type="hidden"
+            name="from_name"
+            value="Portfolio Contact Form"
+          />
+          <input
+            type="checkbox"
+            name="botcheck"
+            className="hidden"
+            style={{display: 'none'}}
+          />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-[#DED7A3]/80 mb-2"
+              >
+                Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                className="w-full bg-gray-800 border border-[#DED7A3]/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#DED7A3]/50"
+                placeholder="Your name"
+                required
               />
-            </motion.div>
+            </div>
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-[#DED7A3]/80 mb-2"
+              >
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="w-full bg-gray-800 border border-[#DED7A3]/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#DED7A3]/50"
+                placeholder="your@email.com"
+                required
+              />
+            </div>
           </div>
-        </div>
-      </section>
+
+          <div>
+            <label
+              htmlFor="phone"
+              className="block text-[#DED7A3]/80 mb-2"
+            >
+              Phone
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              className="w-full bg-gray-800 border border-[#DED7A3]/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#DED7A3]/50"
+              placeholder="+91 1234567890"
+              required
+            />
+          </div>
+
+          <div>
+            <label
+              htmlFor="service"
+              className="block text-[#DED7A3]/80 mb-2"
+            >
+              Service Interested In
+            </label>
+            <select
+              id="service"
+              name="service"
+              className="w-full bg-gray-800 border border-[#DED7A3]/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#DED7A3]/50"
+              required
+            >
+              <option value="">Select a service</option>
+              {services.map((service, index) => (
+                <option key={index} value={service}>
+                  {service}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label
+              htmlFor="message"
+              className="block text-[#DED7A3]/80 mb-2"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              className="w-full bg-gray-800 border border-[#DED7A3]/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-[#DED7A3]/50"
+              placeholder="Tell us about your fitness goals..."
+              required
+            ></textarea>
+          </div>
+
+          <div className="hidden">
+            <input 
+              type="hidden" 
+              name="redirect" 
+              value="https://web3forms.com/success" 
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full bg-[#DED7A3] text-black px-6 py-4 font-bold rounded-lg hover:bg-white transition-all duration-300 transform hover:scale-[1.02]"
+          >
+            SEND MESSAGE
+          </button>
+        </form>
+      </motion.div>
+
+      {/* Image Block */}
+      <motion.div
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.7 }}
+        viewport={{ once: true }}
+        className="hidden lg:flex bg-gray-900/50 backdrop-blur-sm rounded-2xl border border-[#DED7A3]/20 h-[700px] items-center justify-center overflow-hidden"
+      >
+        <img
+          src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+          alt="Fitness gym interior"
+          className="w-full h-full object-cover rounded-xl opacity-80 transition-transform duration-700 hover:scale-105"
+        />
+      </motion.div>
+    </div>
+  </div>
+</section>
 
       {/* Footer */}
       <footer className="bg-black border-t border-[#DED7A3]/20 py-12">
@@ -1169,7 +1192,7 @@ export default function FitnessWebsite() {
             <div>
               <h4 className="text-lg font-bold text-[#DED7A3] mb-4">CONTACT</h4>
               <div className="space-y-2 text-[#DED7A3]/70">
-                <p>123 Fitness Street</p>
+                <p>Whitefield</p>
                 <p>BANGLORE</p>
                 <p>+91 75101811257</p>
                 <p>adfitnesssolutions@gmail.com</p>
